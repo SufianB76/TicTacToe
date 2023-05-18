@@ -15,7 +15,7 @@ const boardElement = document.getElementById('board')
 const winningMessageElement = document.getElementById('winningMessage')
 const restartButton = document.getElementById('restartButton')
 const winningMessageTextElement = document.getElementById('winningMessageText')
-const playerTurnText = document.getElementById('playerTurn')
+const Turn = document.getElementById('Turn')
 let isPlayer_O_Turn = false
 
 startGame()
@@ -77,10 +77,10 @@ function setBoardHoverClass() {
 	boardElement.classList.remove(PLAYER_O_CLASS)
 	if (isPlayer_O_Turn) {
 		boardElement.classList.add(PLAYER_O_CLASS)
-		playerTurnText.innerText = `Player O's turn to go`
+		Turn.innerText = `Player O's turn`
 	} else {
 		boardElement.classList.add(PLAYER_X_CLASS)
-		playerTurnText.innerText = `Player X's turn to go`
+		Turn.innerText = `Player X's turn`
 	}
 }
 
